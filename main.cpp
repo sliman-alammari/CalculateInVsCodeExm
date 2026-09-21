@@ -8,6 +8,16 @@ int subtract(int a, int b) {
     return a - b;
 }
 
+int Multiply(int a,int b)
+{
+    return a*b;
+}
+
+int Division(int a,int b)
+{
+    return a/b;
+}
+
 int main() {
     int x, y;
     char op;
@@ -25,9 +35,16 @@ int main() {
         std::cout << "Result: " << sum(x, y) << std::endl;
     } else if (op == '-') {
         std::cout << "Result: " << subtract(x, y) << std::endl;
-    } else {
+    } else if(op=='*')
+    {
+        std::cout << "Result: " <<Multiply(x,y) <<std::endl;
+    }else if(op=='/')
+    {
+        std::cout<<"Result: " <<Division(x,y) <<std::endl;
+    }   else {
         std::cout << "Invalid operation!" << std::endl;
     }
+    
 
     return 0;
 }
