@@ -18,6 +18,11 @@ int Division(int a,int b)
     return a/b;
 }
 
+int Reminder(int a,int b)
+{
+    return a%b;
+}
+
 int main() {
     int x, y;
     char op;
@@ -28,7 +33,7 @@ int main() {
     std::cout << "Enter second number: ";
     std::cin >> y;
 
-    std::cout << "Choose operation (+ or -): ";
+    std::cout << "Choose operation (+ or - or * or / or %): ";
     std::cin >> op;
 
     if (op == '+') {
@@ -41,10 +46,15 @@ int main() {
     }else if(op=='/')
     {
         std::cout<<"Result: " <<Division(x,y) <<std::endl;
-    }   else {
+    }  
+    else if(op='%')
+    {
+        std::cout<<"Result: " <<Reminder(x,y) <<std::endl;
+    } else {
         std::cout << "Invalid operation!" << std::endl;
     }
     
+
 
     return 0;
 }
